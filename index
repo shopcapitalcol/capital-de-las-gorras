@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopCapitalCol - Tu Tienda Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        .product-card {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: #3b82f6;
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease;
+        }
+        .modal-backdrop {
+            backdrop-filter: blur(8px);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .cap-placeholder {
+            background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
+            border: 2px dashed #9ca3af;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .cap-placeholder:hover {
+            border-color: #3b82f6;
+            background: linear-gradient(45deg, #dbeafe, #bfdbfe);
+        }
+        .modern-btn {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            transition: all 0.3s ease;
+        }
+        .modern-btn:hover {
+            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="h-full bg-gradient-to-br from-slate-50 to-blue-50 font-sans">
+    <div class="min-h-full">
+        <!-- Header -->
+        <header class="bg-white/90 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-blue-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row justify-between items-center py-6 gap-3">
+                    <div class="text-center sm:text-left">
+                        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                            <i class="fas fa-hat-cowboy mr-3 text-blue-500"></i>Capital of Caps
+                        </h1>
+                        <p id="spanish-text" class="text-sm text-gray-600 opacity-0 transition-opacity duration-2000 font-medium">Capital de las Gorras</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center gap-3 text-sm sm:text-base">
+                        <span class="text-gray-700 bg-gray-100 px-3 py-1 rounded-full"><i class="fas fa-envelope mr-2 text-blue-500"></i>shopcapitalcol@gmail.com</span>
+                        <span class="text-gray-700 bg-green-100 px-3 py-1 rounded-full"><i class="fab fa-whatsapp mr-2 text-green-500"></i>+57 322 5202441</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Hero Section -->
+            <section class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                    Nuestras Gorras 🔥
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Descubre nuestra colección exclusiva de gorras con estilo único y calidad premium
+                </p>
+            </section>
+
+            <!-- Productos -->
+            <section class="mb-16">
+                <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                    <!-- Los productos se generarán dinámicamente -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="gradient-bg py-12 mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-black text-white mb-3">
+                        <i class="fas fa-hat-cowboy mr-3"></i>Capital of Caps
+                    </h3>
+                    <p class="text-white/80 text-lg font-medium">Capital de las Gorras</p>
+                </div>
+                <div class="border-t border-white/20 pt-6">
+                    <p class="text-white/90 text-sm font-medium">
+                        <i class="fas fa-copyright mr-2"></i>2024 Capital of Caps. Todos los derechos reservados.
+                    </p>
+                    <p class="text-white/70 text-sm mt-3 flex items-center justify-center gap-2">
+                        <i class="fas fa-fire"></i>
+                        <span>Estilo que marca la diferencia</span>
+                        <i class="fas fa-fire"></i>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal de WhatsApp -->
+        <div id="whatsapp-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 modal-backdrop">
+            <div class="bg-white rounded-2xl max-w-md w-full mx-4 shadow-2xl">
+                <div class="p-8 text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fab fa-whatsapp text-4xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">¡Hablemos! 💬</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">¿Te gustó esta gorra? Escríbenos por WhatsApp y te damos todos los detalles para que sea tuya.</p>
+                    <div class="flex flex-col gap-4">
+                        <button id="whatsapp-redirect" class="w-full bg-green-500 text-white px-6 py-4 rounded-xl hover:bg-green-600 transition-all font-bold text-lg whatsapp-btn shadow-lg hover:shadow-xl">
+                            <i class="fab fa-whatsapp mr-3"></i>Chatear en WhatsApp
+                        </button>
+                        <button id="close-modal" class="w-full bg-gray-100 text-gray-700 px-6 py-3 rounded-xl hover:bg-gray-200 transition-colors font-medium">
+                            Tal vez después
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Datos de productos (gorras)
+        const products = [
+            { id: 1, name: "Gorra Snapback Classic", price: 45, description: "Estilo urbano con ajuste perfecto" },
+            { id: 2, name: "Gorra Trucker Vintage", price: 38, description: "Look retro con malla transpirable" },
+            { id: 3, name: "Gorra Dad Hat Minimal", price: 42, description: "Diseño minimalista y cómodo" },
+            { id: 4, name: "Gorra Bucket Street", price: 50, description: "Tendencia streetwear auténtica" },
+            { id: 5, name: "Gorra Baseball Premium", price: 55, description: "Calidad premium para uso diario" },
+            { id: 6, name: "Gorra Beanie Urban", price: 35, description: "Perfecta para el clima frío" },
+            { id: 7, name: "Gorra Fitted Pro", price: 60, description: "Ajuste perfecto estilo profesional" },
+            { id: 8, name: "Gorra Visor Sport", price: 40, description: "Ideal para actividades deportivas" }
+        ];
+
+        let selectedProduct = null;
+
+        // Renderizar productos
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = products.map(product => `
+                <div class="product-card rounded-2xl shadow-lg overflow-hidden cursor-pointer group" onclick="selectProduct(${product.id})">
+                    <div class="p-6">
+                        <!-- Placeholder para imagen de gorra -->
+                        <div class="cap-placeholder h-48 mb-6 group-hover:scale-105 transition-transform duration-300">
+                            <div class="text-center">
+                                <i class="fas fa-hat-cowboy text-4xl text-gray-400 mb-2"></i>
+                                <p class="text-sm text-gray-500 font-medium">Imagen de gorra</p>
+                                <p class="text-xs text-gray-400">Próximamente</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">${product.name}</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">${product.description}</p>
+                            <div class="text-2xl font-black text-blue-600 mb-6">$${product.price}</div>
+                            <button class="modern-btn w-full text-white py-3 px-6 rounded-xl font-bold text-sm shadow-lg">
+                                <i class="fab fa-whatsapp mr-2"></i>¡La quiero! 🔥
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Seleccionar producto
+        function selectProduct(productId) {
+            selectedProduct = products.find(p => p.id === productId);
+            showWhatsAppModal();
+        }
+
+        // Mostrar modal de WhatsApp
+        function showWhatsAppModal() {
+            const modal = document.getElementById('whatsapp-modal');
+            modal.classList.remove('hidden');
+        }
+
+        // Redirigir a WhatsApp
+        function redirectToWhatsApp() {
+            const phoneNumber = "573225202441"; // Número sin espacios ni símbolos
+            const message = selectedProduct 
+                ? `¡Hola! Me interesa el producto: ${selectedProduct.name} - $${selectedProduct.price}. ¿Podrías darme más información?`
+                : "¡Hola! Me interesan sus productos. ¿Podrían ayudarme?";
+            
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+            
+            // Cerrar modal
+            document.getElementById('whatsapp-modal').classList.add('hidden');
+        }
+
+        // Event listeners
+        document.getElementById('whatsapp-redirect').addEventListener('click', redirectToWhatsApp);
+        document.getElementById('close-modal').addEventListener('click', () => {
+            document.getElementById('whatsapp-modal').classList.add('hidden');
+        });
+
+
+
+        // Cerrar modal al hacer clic fuera
+        document.getElementById('whatsapp-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+
+        // Animación de desvanecido para el texto en español
+        function fadeInSpanishText() {
+            setTimeout(() => {
+                const spanishText = document.getElementById('spanish-text');
+                spanishText.classList.remove('opacity-0');
+                spanishText.classList.add('opacity-100');
+            }, 1500);
+        }
+
+        // Inicializar
+        renderProducts();
+        fadeInSpanishText();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'993c901385e70da0',t:'MTc2MTM0MTI5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
