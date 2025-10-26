@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopCapitalCol - Tu Tienda Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="h-full bg-gradient-to-br from-black to-black font-sans">
+    <div class="min-h-full">
+        <!-- Header -->
+        <header class="bg-white/90 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-blue-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-6">
+                    <div class="flex items-center">
+                        <!-- Espacio para logo -->
+                        <div class="w-12 h-12 flex items-center justify-center">
+                            <img src="img/logo.png" alt="Logo de la empresa">
+                        </div>
+                        <div>
+                            <h1 class="text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r from-black to-black bg-clip-text text-transparent">
+                                Capital of Caps
+                            </h1>
+                            <p id="spanish-text" class="text-xs text-gray-600 opacity-0 transition-opacity duration-2000 font-medium">Capital de las Gorras</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Navegación -->
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="#" onclick="showSection('inicio')" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Inicio</a>
+                        <a href="#" onclick="showSection('gorras')" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Gorras</a>
+                        <a href="#" onclick="showSection('clasico')" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Todo Clásico</a>
+                        <a href="#" onclick="showSection('contacto')" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Contacto</a>
+                    </nav>
+
+                    <!-- Menú móvil -->
+                    <button id="mobile-menu-btn" class="md:hidden hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <!-- Menú móvil desplegable -->
+                <div id="mobile-menu" class="hidden border-t border-gray-200 pt-4 pb-2">
+                    <div class="flex flex-col space-y-3">
+                        <a href="#" onclick="showSection('inicio')" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Inicio</a>
+                        <a href="#" onclick="showSection('gorras')" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Gorras</a>
+                        <a href="#" onclick="showSection('clasico')" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Todo Clásico</a>
+                        <a href="#" onclick="showSection('contacto')" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Sección Inicio -->
+            <section id="inicio-section" class="section-content">
+                <!-- Hero Section -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                        Nuevas Publicaciones 🔥
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Descubre las últimas gorras que han llegado a nuestra colección
+                    </p>
+                </div>
+
+                <!-- Nuevas Publicaciones -->
+                <div id="nuevas-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 mb-16">
+                    <!-- Las nuevas publicaciones se generarán dinámicamente -->
+                </div>
+
+                <!-- CTA Section -->
+                <div class="text-center bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4">¿Buscas algo específico?</h3>
+                    <p class="mb-6">Explora todas nuestras colecciones y encuentra tu estilo perfecto</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="showSection('gorras')" class="bg-white text-blue-600 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
+                            Ver Todas las Gorras
+                        </button>
+                        <button onclick="showSection('clasico')" class="bg-white/20 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/30 transition-colors">
+                            Colección Clásica
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Gorras -->
+            <section id="gorras-section" class="section-content hidden">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                        Todas Nuestras Gorras 🧢
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Explora nuestra colección completa de gorras con estilo único y calidad premium
+                    </p>
+                </div>
+
+                <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                    <!-- Los productos se generarán dinámicamente -->
+                </div>
+            </section>
+
+            <!-- Sección Todo Clásico -->
+            <section id="clasico-section" class="section-content hidden">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                        Todo Clásico ⭐
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Los diseños atemporales que nunca pasan de moda
+                    </p>
+                </div>
+
+                <div id="clasico-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                    <!-- Los productos clásicos se generarán dinámicamente -->
+                </div>
+            </section>
+
+            <!-- Sección Contacto -->
+            <section id="contacto-section" class="section-content hidden">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                        Contáctanos 📞
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        ¿Tienes alguna pregunta? Estamos aquí para ayudarte
+                    </p>
+                </div>
+
+                <div class="max-w-2xl mx-auto">
+                    <!-- Información de contacto -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fab fa-whatsapp text-2xl text-green-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">WhatsApp</h3>
+                            <p class="text-gray-600 mb-4">Chatea con nosotros directamente</p>
+                            <a href="https://wa.me/573225202441" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-green-600 transition-colors inline-block">
+                                +57 322 5202441
+                            </a>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-envelope text-2xl text-blue-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Email</h3>
+                            <p class="text-gray-600 mb-4">Escríbenos un correo</p>
+                            <a href="mailto:shopcapitalcol@gmail.com" class="bg-blue-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-600 transition-colors inline-block">
+                                shopcapitalcol@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de contacto -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Envíanos un mensaje</h3>
+                        <form id="contact-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nombre completo</label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Correo electrónico</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full modern-btn text-white py-4 px-6 rounded-xl font-bold text-lg shadow-lg">
+                                <i class="fas fa-paper-plane mr-2"></i>Enviar mensaje
+                            </button>
+                        </form>
+                        <div id="contact-success" class="hidden mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-xl text-center">
+                            ¡Gracias por tu mensaje! Te contactaremos pronto.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="gradient-bg py-12 mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-black text-white mb-3">
+                        </i>🧢 Capital of Caps
+                    </h3>
+                    <p class="text-white/80 text-lg font-medium">Capital de las Gorras</p>
+                </div>
+                <div class="border-t border-white/20 pt-6">
+                    <p class="text-white/90 text-sm font-medium">
+                        <i class="fas fa-copyright mr-2"></i>2024 Capital of Caps. Todos los derechos reservados.
+                    </p>
+                    <p class="text-white/70 text-sm mt-3 flex items-center justify-center gap-2">
+                        <i class="fas fa-fire"></i>
+                        <span>Estilo que marca la diferencia</span>
+                        <i class="fas fa-fire"></i>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal de WhatsApp -->
+        <div id="whatsapp-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 modal-backdrop">
+            <div class="bg-white rounded-2xl max-w-md w-full mx-4 shadow-2xl">
+                <div class="p-8 text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fab fa-whatsapp text-4xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">¡Hablemos! 💬</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">¿Te gustó esta gorra? Escríbenos por WhatsApp y te damos todos los detalles para que sea tuya.</p>
+                    <div class="flex flex-col gap-4">
+                        <button id="whatsapp-redirect" class="w-full bg-green-500 text-white px-6 py-4 rounded-xl hover:bg-green-600 transition-all font-bold text-lg whatsapp-btn shadow-lg hover:shadow-xl">
+                            <i class="fab fa-whatsapp mr-3"></i>Chatear en WhatsApp
+                        </button>
+                        <button id="close-modal" class="w-full bg-gray-100 text-gray-700 px-6 py-3 rounded-xl hover:bg-gray-200 transition-colors font-medium">
+                            Tal vez después
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
