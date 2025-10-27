@@ -1,29 +1,29 @@
 // Datos de productos (gorras)
 const products = [
     { id: 1, name: "ADIDAS<br>Trefoil", price: 50, description: "Urbano - Deportivo<br>Dorado - Negro."},
-    { id: 2, name: "NIKE CLASSICS", price: 50, description: "Urbano - Deportivo<br>" },
-    { id: 3, name: "NIKE CLASSICS<br>World Series", price: 50, description: "Urbano - Deportivo<br>" },
+    { id: 2, name: "NIKE CLASSICS<br>Unisex", price: 50, description: "Urbano - Deportivo<br>Beige - Navy - Ocre" },
+    { id: 3, name: "NIKE CLASSICS<br>World Series", price: 50, description: "Urbano - Deportivo<br>Verde - Negro " },
     { id: 4, name: "MONASTERY<br>Blackout Edition", price: 50, description: "Luxury - Urbano<br>Negro sobre Negro" },
-    { id: 5, name: "Baseball Premium", price: 50, description: "Urbano - Deportivo<br>" },
-    { id: 6, name: "Beanie Urban", price: 50, description: "Urbano - Deportivo<br>" },
-    { id: 7, name: "Fitted Pro", price: 50, description: "Urbano - Deportivo<br>" },
-    { id: 8, name: "Visor Sport", price: 50, description: "Urbano - Deportivo<br>" }
+    { id: 0, name: "NIKE CLASSICS<br>World Series", price: 50, description: "Urbano - Deportivo<br>Verde - Beige - Ocre" },
+    { id: 6, name: "MONASTERY<br>The King", price: 50, description: "Luxury - Urbano<br>Dorado - Negro" },
+    { id: 0, name: "soon", price: 50, description: "Urbano - Deportivo<br>" },
+    { id: 0, name: "soon", price: 50, description: "Urbano - Deportivo<br>" }
 ];
 
 // Nuevas publicaciones (últimas 4 gorras)
 const nuevasPublicaciones = [
     { id: 9, name: "ADIDAS<br>Trefoil", price: 50, description: "Urbano - Deportivo<br>Dorado - Negro.", isNew: true },
-    { id: 10, name: "NIKE CLASSICS", price: 50, description: "Urbano - Deportivo<br>Beige - Navy - Ocre.", isNew: true },
-    { id: 11, name: "NIKE CLASSICS<br>World Series", price: 50, description: "Urbano - Deportivo<br>", isNew: true },
+    { id: 10, name: "NIKE CLASSICS<br>Unisex", price: 50, description: "Urbano - Deportivo<br>Beige - Navy - Ocre", isNew: true },
+    { id: 11, name: "NIKE CLASSICS<br>World Series", price: 50, description: "Urbano - Deportivo<br>Verde - Negro", isNew: true },
     { id: 12, name: "MONASTERY<br>Blackout Edition", price: 50, description: "Luxury - Urbano<br>Negro sobre Negro", isNew: true }
 ];
 
 // Productos clásicos
 const productosClasicos = [
-    { id: 13, name: "Classic Black", price: 90, description: "Urbano - Deportivo<br>" },
-    { id: 14, name: "White Essential", price: 90, description: "Urbano - Deportivo<br>" },
-    { id: 15, name: "Navy Traditional", price: 90, description: "Urbano - Deportivo<br>" },
-    { id: 16, name: "Gray Vintage", price: 90, description: "Urbano - Deportivo<br>" }
+    { id: 0, name: "soon", price: 90, description: "Urbano - Classic<br>" },
+    { id: 0, name: "soon", price: 90, description: "Urbano - Classic<br>" },
+    { id: 0, name: "soon", price: 90, description: "Urbano - Classic<br>" },
+    { id: 0, name: "soon", price: 90, description: "Urbano - Classic<br>" }
 ];
 
 let selectedProduct = null;
