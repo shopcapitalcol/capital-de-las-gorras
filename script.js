@@ -1,7 +1,7 @@
 // Datos de productos (gorras)
 const products = [
     { id: 1, name: "Adidas Trefoil 97", price: 50, description: "deportiva, urbana, dorado - negro."},
-    { id: 2, name: "Gorra Trucker Vintage", price: 38, description: "Look retro con malla transpirable" },
+    { id: 2, name: "Gorra Trucker Vintage", price: 50, description: "Look retro con malla transpirable" },
     { id: 3, name: "Gorra Dad Hat Minimal", price: 42, description: "Diseño minimalista y cómodo" },
     { id: 4, name: "Gorra Bucket Street", price: 50, description: "Tendencia streetwear auténtica" },
     { id: 5, name: "Gorra Baseball Premium", price: 55, description: "Calidad premium para uso diario" },
@@ -12,8 +12,8 @@ const products = [
 
 // Nuevas publicaciones (últimas 4 gorras)
 const nuevasPublicaciones = [
-    { id: 9, name: "Gorra Adidas Trefoil 97", price: 50, description: "deportiva, urbana, dorado - negro.", isNew: true },
-    { id: 10, name: "Gorra Neon Street", price: 48, description: "Colores vibrantes y modernos", isNew: true },
+    { id: 9, name: "Adidas Trefoil 97", price: 50, description: "deportiva, urbana, dorado - negro.", isNew: true },
+    { id: 10, name: "Gorra Neon Street", price: 50, description: "Colores vibrantes y modernos", isNew: true },
     { id: 11, name: "Gorra Retro Wave", price: 52, description: "Inspiración vintage renovada", isNew: true },
     { id: 12, name: "Gorra Tech Pro", price: 68, description: "Tecnología y estilo unidos", isNew: true }
 ];
