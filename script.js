@@ -1,6 +1,6 @@
 // Datos de productos (gorras)
 const products = [
-    { id: 1, name: "Gorra Snapback Classic", price: 45, description: "Estilo urbano con ajuste perfecto" },
+    { id: 1, name: "Adidas Trefoil 97", price: 50, description: "deportiva, urbana, dorado - negro."},
     { id: 2, name: "Gorra Trucker Vintage", price: 38, description: "Look retro con malla transpirable" },
     { id: 3, name: "Gorra Dad Hat Minimal", price: 42, description: "Diseño minimalista y cómodo" },
     { id: 4, name: "Gorra Bucket Street", price: 50, description: "Tendencia streetwear auténtica" },
@@ -12,7 +12,7 @@ const products = [
 
 // Nuevas publicaciones (últimas 4 gorras)
 const nuevasPublicaciones = [
-    { id: 9, name: "Gorra Supreme Edition", price: 75, description: "Edición limitada exclusiva", isNew: true },
+    { id: 9, name: "Gorra Adidas Trefoil 97", price: 50, description: "deportiva, urbana, dorado - negro.", isNew: true },
     { id: 10, name: "Gorra Neon Street", price: 48, description: "Colores vibrantes y modernos", isNew: true },
     { id: 11, name: "Gorra Retro Wave", price: 52, description: "Inspiración vintage renovada", isNew: true },
     { id: 12, name: "Gorra Tech Pro", price: 68, description: "Tecnología y estilo unidos", isNew: true }
@@ -75,15 +75,15 @@ function renderProductCard(product, containerId = null) {
                 <div class="cap-placeholder h-48 mb-6 group-hover:scale-105 transition-transform duration-300">
                     <div class="text-center">
                         <i class="fas fa-hat-cowboy text-4xl text-gray-400 mb-2"></i>
-                        <p class="text-sm text-gray-500 font-medium">Imagen de gorra</p>
-                        <p class="text-xs text-gray-400">Próximamente</p>
+                        <img src="img/gorras/gorra-${product.id}.png" alt="${product.name}" class="w-full h-full object-cover">
+                      
                     </div>
                 </div>
                 
                 <div class="text-center">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">${product.name}</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-[#c8b273] transition-colors">${product.name}</h3>
                     <p class="text-gray-600 mb-4 text-sm leading-relaxed">${product.description}</p>
-                    <div class="text-2xl font-black text-blue-600 mb-6">$${product.price}</div>
+                    <div class="text-2xl font-black text-[#c8b273]  mb-6">$${product.price}</div>
                     <button class="modern-btn w-full text-white py-3 px-6 rounded-xl font-bold text-sm shadow-lg">
                         <i class="fab fa-whatsapp mr-2"></i>¡La quiero! 🔥
                     </button>
@@ -153,20 +153,6 @@ document.getElementById('mobile-menu-btn').addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
     mobileMenu.classList.toggle('show');
     hamburger.classList.toggle('active');
-});
-
-// Formulario de contacto
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Mostrar mensaje de éxito
-    document.getElementById('contact-success').classList.remove('hidden');
-    this.reset();
-    
-    // Ocultar mensaje después de 5 segundos
-    setTimeout(() => {
-        document.getElementById('contact-success').classList.add('hidden');
-    }, 5000);
 });
 
 // Cerrar modal al hacer clic fuera

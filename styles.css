@@ -9,9 +9,9 @@ body {
 }
 
 .product-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    border-color: #3b82f6;
-    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+    transform: translateY(-1px) scale(1.02);
+    border-color: #c8b273;
+    box-shadow: 1px 10px 20px #85754c;
 }
 
 .whatsapp-btn:hover {
@@ -24,12 +24,12 @@ body {
 }
 
 .gradient-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #000000 0%, #85754c 100%);
 }
 
 .cap-placeholder {
-    background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
-    border: 2px dashed #9ca3af;
+    background: linear-gradient(45deg, #ffffff00, #ffffff00);
+    border: 2px dashed #ffffff00;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,18 +37,13 @@ body {
     transition: all 0.3s ease;
 }
 
-.cap-placeholder:hover {
-    border-color: #3b82f6;
-    background: linear-gradient(45deg, #dbeafe, #bfdbfe);
-}
-
 .modern-btn {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    background: linear-gradient(135deg, #000000, #000000);
     transition: all 0.3s ease;
 }
 
 .modern-btn:hover {
-    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    background: linear-gradient(135deg, #85754c, #c8b273);
     transform: translateY(-2px);
 }
 
@@ -63,14 +58,14 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: #374151;
+    background-color: #000000;
     margin: 3px 0;
     transition: 0.3s;
     border-radius: 2px;
 }
 
 .hamburger:hover span {
-    background-color: #2563eb;
+    background-color: #85754c;
 }
 
 /* Animación del menú hamburguesa cuando está activo */
