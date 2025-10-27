@@ -1,29 +1,29 @@
 // Datos de productos (gorras)
 const products = [
-    { id: 1, name: "Adidas Trefoil 97", price: 50, description: "deportiva, urbana, dorado - negro."},
-    { id: 2, name: "Gorra Trucker Vintage", price: 50, description: "Look retro con malla transpirable" },
-    { id: 3, name: "Gorra Dad Hat Minimal", price: 42, description: "Diseño minimalista y cómodo" },
-    { id: 4, name: "Gorra Bucket Street", price: 50, description: "Tendencia streetwear auténtica" },
-    { id: 5, name: "Gorra Baseball Premium", price: 55, description: "Calidad premium para uso diario" },
-    { id: 6, name: "Gorra Beanie Urban", price: 35, description: "Perfecta para el clima frío" },
-    { id: 7, name: "Gorra Fitted Pro", price: 60, description: "Ajuste perfecto estilo profesional" },
-    { id: 8, name: "Gorra Visor Sport", price: 40, description: "Ideal para actividades deportivas" }
+    { id: 1, name: "ADIDAS<br>Trefoil", price: 50, description: "Urbano - Deportivo<br>Dorado - Negro."},
+    { id: 2, name: "NIKE CLASSICS", price: 50, description: "Urbano - Deportivo<br>" },
+    { id: 3, name: "NIKE CLASSICS<br>World Series", price: 50, description: "Urbano - Deportivo<br>" },
+    { id: 4, name: "MONASTERY<br>Blackout Edition", price: 50, description: "Luxury - Urbano<br>Negro sobre Negro" },
+    { id: 5, name: "Baseball Premium", price: 50, description: "Urbano - Deportivo<br>" },
+    { id: 6, name: "Beanie Urban", price: 50, description: "Urbano - Deportivo<br>" },
+    { id: 7, name: "Fitted Pro", price: 50, description: "Urbano - Deportivo<br>" },
+    { id: 8, name: "Visor Sport", price: 50, description: "Urbano - Deportivo<br>" }
 ];
 
 // Nuevas publicaciones (últimas 4 gorras)
 const nuevasPublicaciones = [
-    { id: 9, name: "Adidas Trefoil 97", price: 50, description: "deportiva, urbana, dorado - negro.", isNew: true },
-    { id: 10, name: "Gorra Neon Street", price: 50, description: "Colores vibrantes y modernos", isNew: true },
-    { id: 11, name: "Gorra Retro Wave", price: 52, description: "Inspiración vintage renovada", isNew: true },
-    { id: 12, name: "Gorra Tech Pro", price: 68, description: "Tecnología y estilo unidos", isNew: true }
+    { id: 9, name: "ADIDAS<br>Trefoil", price: 50, description: "Urbano - Deportivo<br>Dorado - Negro.", isNew: true },
+    { id: 10, name: "NIKE CLASSICS", price: 50, description: "Urbano - Deportivo<br>Beige - Navy - Ocre.", isNew: true },
+    { id: 11, name: "NIKE CLASSICS<br>World Series", price: 50, description: "Urbano - Deportivo<br>", isNew: true },
+    { id: 12, name: "MONASTERY<br>Blackout Edition", price: 50, description: "Luxury - Urbano<br>Negro sobre Negro", isNew: true }
 ];
 
 // Productos clásicos
 const productosClasicos = [
-    { id: 13, name: "Gorra Classic Black", price: 90, description: "Negro clásico atemporal" },
-    { id: 14, name: "Gorra White Essential", price: 90, description: "Blanco básico elegante" },
-    { id: 15, name: "Gorra Navy Traditional", price: 95, description: "Azul marino tradicional" },
-    { id: 16, name: "Gorra Gray Vintage", price: 60, description: "Gris vintage sofisticado" }
+    { id: 13, name: "Classic Black", price: 90, description: "Urbano - Deportivo<br>" },
+    { id: 14, name: "White Essential", price: 90, description: "Urbano - Deportivo<br>" },
+    { id: 15, name: "Navy Traditional", price: 90, description: "Urbano - Deportivo<br>" },
+    { id: 16, name: "Gray Vintage", price: 90, description: "Urbano - Deportivo<br>" }
 ];
 
 let selectedProduct = null;
