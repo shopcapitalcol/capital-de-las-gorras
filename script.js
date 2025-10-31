@@ -4,7 +4,7 @@ const products = [
     { id: 2, name: "NIKE CLASSICS<br>Unisex", price: 50, description: "Urbano - Deportivo<br>Beige - Navy - Ocre" },
     { id: 3, name: "NIKE CLASSICS<br>World Series", price: 50, description: "Urbano - Deportivo<br>Verde - Negro " },
     { id: 4, name: "MONASTERY<br>Blackout Edition", price: 50, description: "Luxury - Urbano<br>Negro sobre Negro" },
-    { id: 0, name: "NIKE CLASSICS<br>World Series", price: 50, description: "Urbano - Deportivo<br>Verde - Beige - Ocre" },
+    { id: 5, name: "NIKE CLASSICS<br>World Series", price: 50, description: "Urbano - Deportivo<br>Verde - Beige - Ocre" },
     { id: 6, name: "MONASTERY<br>The King", price: 50, description: "Luxury - Urbano<br>Dorado - Negro" },
     { id: 0, name: "soon", price: 50, description: "Urbano - Deportivo<br>" },
     { id: 0, name: "soon", price: 50, description: "Urbano - Deportivo<br>" }
@@ -126,7 +126,7 @@ function showWhatsAppModal() {
 
 // Redirigir a WhatsApp
 function redirectToWhatsApp() {
-    const phoneNumber = "573225202441"; // Número sin espacios ni símbolos
+    const phoneNumber = "573025976600"; // Número sin espacios ni símbolos
     const message = selectedProduct 
         ? `¡Hola! Me interesa el producto: ${selectedProduct.name} - $${selectedProduct.price}. ¿Podrías darme más información?`
         : "¡Hola! Me interesan sus productos. ¿Podrían ayudarme?";
